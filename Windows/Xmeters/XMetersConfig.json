@@ -1,0 +1,297 @@
+{
+  "registrationEmail": "",
+  "registrationKey": "",
+  "checkForUpdates": false,
+  "horizontalSpacing": 3,
+  "verticalSpacing": 3,
+  "customColors": [
+    "#FF409EFE",
+    "#FFFFFFFF",
+    "#FFFFFFFF",
+    "#FFFFFFFF",
+    "#FFFFFFFF",
+    "#FFFFFFFF",
+    "#FFFFFFFF",
+    "#FFFFFFFF",
+    "#FFFFFFFF",
+    "#FFFFFFFF",
+    "#FFFFFFFF",
+    "#FFFFFFFF",
+    "#FFFFFFFF",
+    "#FFFFFFFF",
+    "#FFFFFFFF",
+    "#FFFFFFFF"
+  ],
+  "meterGroups": [
+    {
+      "multiCore": true,
+      "separateUtilization": true,
+      "combineLogicalCores": false,
+      "systemColor": "#FFDFDFDF",
+      "userColor": "#FF409EFE",
+      "cpuColor": "#FF409EFE",
+      "name": "cpu",
+      "type": "bar",
+      "enabled": true,
+      "refreshRate": 3000,
+      "meters": [
+        {
+          "meterType": "column",
+          "width": 8,
+          "refreshRate": 3000,
+          "color": "#FF595959",
+          "counters": [
+            {
+              "counterPath": "(\\Processor(0)\\% privileged time)",
+              "color": "#FFDFDFDF",
+              "minValue": 0.0,
+              "maxValue": 100.0
+            },
+            {
+              "counterPath": "(\\Processor(0)\\% user time)",
+              "color": "#FF409EFE",
+              "minValue": 0.0,
+              "maxValue": 100.0
+            }
+          ]
+        },
+        {
+          "meterType": "spacer",
+          "width": 3
+        },
+        {
+          "meterType": "column",
+          "width": 8,
+          "refreshRate": 3000,
+          "color": "#FF595959",
+          "counters": [
+            {
+              "counterPath": "(\\Processor(1)\\% privileged time)",
+              "color": "#FFDFDFDF",
+              "minValue": 0.0,
+              "maxValue": 100.0
+            },
+            {
+              "counterPath": "(\\Processor(1)\\% user time)",
+              "color": "#FF409EFE",
+              "minValue": 0.0,
+              "maxValue": 100.0
+            }
+          ]
+        },
+        {
+          "meterType": "spacer",
+          "width": 3
+        },
+        {
+          "meterType": "column",
+          "width": 8,
+          "refreshRate": 3000,
+          "color": "#FF595959",
+          "counters": [
+            {
+              "counterPath": "(\\Processor(2)\\% privileged time)",
+              "color": "#FFDFDFDF",
+              "minValue": 0.0,
+              "maxValue": 100.0
+            },
+            {
+              "counterPath": "(\\Processor(2)\\% user time)",
+              "color": "#FF409EFE",
+              "minValue": 0.0,
+              "maxValue": 100.0
+            }
+          ]
+        },
+        {
+          "meterType": "spacer",
+          "width": 3
+        },
+        {
+          "meterType": "column",
+          "width": 8,
+          "refreshRate": 3000,
+          "color": "#FF595959",
+          "counters": [
+            {
+              "counterPath": "(\\Processor(3)\\% privileged time)",
+              "color": "#FFDFDFDF",
+              "minValue": 0.0,
+              "maxValue": 100.0
+            },
+            {
+              "counterPath": "(\\Processor(3)\\% user time)",
+              "color": "#FF409EFE",
+              "minValue": 0.0,
+              "maxValue": 100.0
+            }
+          ]
+        }
+      ],
+      "maxHeight": 24,
+      "outlineColor": "#FF595959",
+      "trigger": 0
+    },
+    {
+      "source": "_Total",
+      "readColor": "#FF409EFE",
+      "writeColor": "#FFE7E7E7",
+      "name": "storage",
+      "type": "text",
+      "enabled": true,
+      "refreshRate": 3000,
+      "orientation": "horizontal",
+      "meters": [
+        {
+          "meterType": "text",
+          "width": 54,
+          "refreshRate": 3000,
+          "color": "#FFFFFFFF",
+          "counters": [
+            {
+              "counterPath": "(\\PhysicalDisk(_Total)\\Disk Read Bytes/sec)",
+              "color": "#FF409EFE",
+              "units": "bytes/second",
+              "trigger": "> 1000",
+              "font": "Segoe UI (TrueType)",
+              "fontSize": 10
+            },
+            {
+              "counterPath": "(\\PhysicalDisk(_Total)\\Disk Write Bytes/sec)",
+              "color": "#FFE7E7E7",
+              "units": "bytes/second",
+              "trigger": "> 1000",
+              "font": "Segoe UI (TrueType)",
+              "fontSize": 10
+            }
+          ]
+        },
+        {
+          "meterType": "indicator",
+          "width": 18,
+          "refreshRate": 3000,
+          "color": "#FFFFFFFF",
+          "counters": [
+            {
+              "counterPath": "(\\PhysicalDisk(_Total)\\Disk Read Bytes/sec)",
+              "color": "#FF409EFE",
+              "trigger": "> 1000",
+              "indicator": "▲",
+              "font": "Arial",
+              "fontSize": 10
+            },
+            {
+              "counterPath": "(\\PhysicalDisk(_Total)\\Disk Write Bytes/sec)",
+              "color": "#FFE7E7E7",
+              "trigger": "> 1000",
+              "indicator": "▼",
+              "font": "Arial",
+              "fontSize": 10
+            }
+          ]
+        }
+      ],
+      "height": 24,
+      "minWidth": 70,
+      "maxHeight": 24,
+      "outlineColor": "#FFFFFFFF",
+      "trigger": 1000
+    },
+    {
+      "source": "<All instances>",
+      "readColor": "#FF409EFE",
+      "writeColor": "#FFE7E7E7",
+      "separateReadWrite": false,
+      "autoBandwidth": true,
+      "bandwidthKiloBytes": 125000,
+      "name": "network",
+      "type": "text",
+      "enabled": true,
+      "refreshRate": 3000,
+      "orientation": "horizontal",
+      "meters": [
+        {
+          "meterType": "text",
+          "width": 54,
+          "refreshRate": 3000,
+          "color": "#FFFFFFFF",
+          "counters": [
+            {
+              "counterPath": "(\\Network Interface(Intel[R] Dual Band Wireless-AC 8265)\\Bytes Sent/sec) + (\\Network Interface(Intel[R] Ethernet Connection [4] I219-LM)\\Bytes Sent/sec)",
+              "color": "#FFE7E7E7",
+              "units": "bytes/second",
+              "trigger": "> 1000",
+              "font": "Segoe UI (TrueType)",
+              "fontSize": 10
+            },
+            {
+              "counterPath": "(\\Network Interface(Intel[R] Dual Band Wireless-AC 8265)\\Bytes Received/sec) + (\\Network Interface(Intel[R] Ethernet Connection [4] I219-LM)\\Bytes Received/sec)",
+              "color": "#FF409EFE",
+              "units": "bytes/second",
+              "trigger": "> 1000",
+              "font": "Segoe UI (TrueType)",
+              "fontSize": 10
+            }
+          ]
+        },
+        {
+          "meterType": "indicator",
+          "width": 18,
+          "refreshRate": 3000,
+          "color": "#FFFFFFFF",
+          "counters": [
+            {
+              "counterPath": "(\\Network Interface(Intel[R] Dual Band Wireless-AC 8265)\\Bytes Sent/sec) + (\\Network Interface(Intel[R] Ethernet Connection [4] I219-LM)\\Bytes Sent/sec)",
+              "color": "#FFE7E7E7",
+              "trigger": "> 1000",
+              "indicator": "▲",
+              "font": "Arial",
+              "fontSize": 10
+            },
+            {
+              "counterPath": "(\\Network Interface(Intel[R] Dual Band Wireless-AC 8265)\\Bytes Received/sec) + (\\Network Interface(Intel[R] Ethernet Connection [4] I219-LM)\\Bytes Received/sec)",
+              "color": "#FF409EFE",
+              "trigger": "> 1000",
+              "indicator": "▼",
+              "font": "Arial",
+              "fontSize": 10
+            }
+          ]
+        }
+      ],
+      "height": 24,
+      "minWidth": 70,
+      "maxHeight": 24,
+      "outlineColor": "#FFFFFFFF",
+      "trigger": 1000
+    },
+    {
+      "memoryUsedColor": "#FF409EFE",
+      "name": "memory",
+      "type": "bar",
+      "enabled": true,
+      "refreshRate": 3000,
+      "meters": [
+        {
+          "meterType": "column",
+          "width": 8,
+          "refreshRate": 3000,
+          "color": "#FF595959",
+          "counters": [
+            {
+              "counterPath": "(((PERFORMANCE_INFORMATION.PhysicalTotal) - (PERFORMANCE_INFORMATION.PhysicalAvailable)) / (PERFORMANCE_INFORMATION.PhysicalTotal)) * 100",
+              "color": "#FF409EFE",
+              "units": "percent",
+              "font": "Segoe UI (TrueType)",
+              "fontSize": 10,
+              "minValue": 0.0,
+              "maxValue": 100.0
+            }
+          ]
+        }
+      ],
+      "maxHeight": 24,
+      "outlineColor": "#FF595959"
+    }
+  ]
+}
